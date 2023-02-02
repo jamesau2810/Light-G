@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		1F3F32442987F4D600774073 /* BookingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3F32432987F4D600774073 /* BookingDetailViewController.swift */; };
 		1F3F32482987FADB00774073 /* BookingDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3F32472987FADB00774073 /* BookingDetailTableViewCell.swift */; };
+		1FB421B4298B93820055B509 /* ParkedCarListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB421B3298B93810055B509 /* ParkedCarListViewController.swift */; };
+		1FB421B6298B94ED0055B509 /* ReservedCarLotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB421B5298B94ED0055B509 /* ReservedCarLotViewController.swift */; };
+		1FB421B8298B97200055B509 /* ReservedCarLotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB421B7298B97200055B509 /* ReservedCarLotTableViewCell.swift */; };
+		1FB421BA298B97430055B509 /* ParkedCarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB421B9298B97430055B509 /* ParkedCarTableViewCell.swift */; };
+		1FB421BD298B9CF20055B509 /* FindParkLotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB421BC298B9CF20055B509 /* FindParkLotViewController.swift */; };
+		1FB421BF298B9D830055B509 /* FindCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB421BE298B9D830055B509 /* FindCarViewController.swift */; };
+		1FB421C1298BA03D0055B509 /* map.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 1FB421C0298BA03D0055B509 /* map.geojson */; };
 		1FBA90FC29877990002694B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBA90FB29877990002694B3 /* AppDelegate.swift */; };
 		1FBA90FE29877990002694B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBA90FD29877990002694B3 /* SceneDelegate.swift */; };
 		1FBA910029877990002694B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBA90FF29877990002694B3 /* ViewController.swift */; };
@@ -25,6 +32,13 @@
 /* Begin PBXFileReference section */
 		1F3F32432987F4D600774073 /* BookingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetailViewController.swift; sourceTree = "<group>"; };
 		1F3F32472987FADB00774073 /* BookingDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingDetailTableViewCell.swift; sourceTree = "<group>"; };
+		1FB421B3298B93810055B509 /* ParkedCarListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkedCarListViewController.swift; sourceTree = "<group>"; };
+		1FB421B5298B94ED0055B509 /* ReservedCarLotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservedCarLotViewController.swift; sourceTree = "<group>"; };
+		1FB421B7298B97200055B509 /* ReservedCarLotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservedCarLotTableViewCell.swift; sourceTree = "<group>"; };
+		1FB421B9298B97430055B509 /* ParkedCarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkedCarTableViewCell.swift; sourceTree = "<group>"; };
+		1FB421BC298B9CF20055B509 /* FindParkLotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindParkLotViewController.swift; sourceTree = "<group>"; };
+		1FB421BE298B9D830055B509 /* FindCarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindCarViewController.swift; sourceTree = "<group>"; };
+		1FB421C0298BA03D0055B509 /* map.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = map.geojson; sourceTree = "<group>"; };
 		1FBA90F829877990002694B3 /* Light-G.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Light-G.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FBA90FB29877990002694B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FBA90FD29877990002694B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +65,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FB421BB298B9BDA0055B509 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1FB421C0298BA03D0055B509 /* map.geojson */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		1FBA90EF29877990002694B3 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +92,7 @@
 		1FBA90FA29877990002694B3 /* Light-G */ = {
 			isa = PBXGroup;
 			children = (
+				1FB421BB298B9BDA0055B509 /* Model */,
 				1FBA911429877FC5002694B3 /* ViewCell */,
 				1FBA90FB29877990002694B3 /* AppDelegate.swift */,
 				1FBA90FD29877990002694B3 /* SceneDelegate.swift */,
@@ -82,6 +105,10 @@
 				1FBA911229877BDC002694B3 /* MenuViewController.swift */,
 				1FBA911729878223002694B3 /* BookingViewController.swift */,
 				1F3F32432987F4D600774073 /* BookingDetailViewController.swift */,
+				1FB421B3298B93810055B509 /* ParkedCarListViewController.swift */,
+				1FB421B5298B94ED0055B509 /* ReservedCarLotViewController.swift */,
+				1FB421BC298B9CF20055B509 /* FindParkLotViewController.swift */,
+				1FB421BE298B9D830055B509 /* FindCarViewController.swift */,
 			);
 			path = "Light-G";
 			sourceTree = "<group>";
@@ -92,6 +119,8 @@
 				1F3F32472987FADB00774073 /* BookingDetailTableViewCell.swift */,
 				1FBA911529877FFB002694B3 /* MenuTableViewCell.swift */,
 				1FBA91192987826A002694B3 /* BookingTableViewCell.swift */,
+				1FB421B7298B97200055B509 /* ReservedCarLotTableViewCell.swift */,
+				1FB421B9298B97430055B509 /* ParkedCarTableViewCell.swift */,
 			);
 			path = ViewCell;
 			sourceTree = "<group>";
@@ -154,6 +183,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FB421C1298BA03D0055B509 /* map.geojson in Resources */,
 				1FBA910B29877995002694B3 /* LaunchScreen.storyboard in Resources */,
 				1FBA910829877995002694B3 /* Assets.xcassets in Resources */,
 				1FBA910329877990002694B3 /* Main.storyboard in Resources */,
@@ -169,12 +199,18 @@
 			files = (
 				1FBA910029877990002694B3 /* ViewController.swift in Sources */,
 				1F3F32442987F4D600774073 /* BookingDetailViewController.swift in Sources */,
+				1FB421B4298B93820055B509 /* ParkedCarListViewController.swift in Sources */,
+				1FB421B8298B97200055B509 /* ReservedCarLotTableViewCell.swift in Sources */,
 				1FBA911A2987826A002694B3 /* BookingTableViewCell.swift in Sources */,
 				1FBA911329877BDC002694B3 /* MenuViewController.swift in Sources */,
 				1FBA911629877FFB002694B3 /* MenuTableViewCell.swift in Sources */,
+				1FB421BA298B97430055B509 /* ParkedCarTableViewCell.swift in Sources */,
 				1FBA90FC29877990002694B3 /* AppDelegate.swift in Sources */,
+				1FB421BD298B9CF20055B509 /* FindParkLotViewController.swift in Sources */,
 				1FBA910629877990002694B3 /* Light_G.xcdatamodeld in Sources */,
 				1FBA911829878223002694B3 /* BookingViewController.swift in Sources */,
+				1FB421BF298B9D830055B509 /* FindCarViewController.swift in Sources */,
+				1FB421B6298B94ED0055B509 /* ReservedCarLotViewController.swift in Sources */,
 				1F3F32482987FADB00774073 /* BookingDetailTableViewCell.swift in Sources */,
 				1FBA90FE29877990002694B3 /* SceneDelegate.swift in Sources */,
 			);

@@ -11,14 +11,17 @@ enum segueStr {
     case book
     case guide
     case find
+    case setting
     var ite : String {
         switch self {
         case .book:
             return "bookparking"
         case .guide:
-            return ""
+            return "parklotguide"
         case .find:
-            return ""
+            return "findcar"
+        case .setting:
+            return "setting"
         }
     }
 }
@@ -66,9 +69,10 @@ class MenuViewController: UITableViewController {
         switch segue.identifier {
         case segueStr.book.ite:
             guard let controller = segue.destination as? BookingViewController else { return  }
-//        case "":
-//            guard let controller = segue.destination as? BookingViewController else { return  }
-//        case "":
+        case segueStr.guide.ite:
+            guard let controller = segue.destination as? ReservedCarLotViewController else { return  }
+        case segueStr.find.ite:
+            guard let controller = segue.destination as? ParkedCarListViewController else { return  }
 //        case "":
 //        case "":
         default:

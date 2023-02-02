@@ -105,11 +105,191 @@
                     <navigationItem key="navigationItem" id="Gd3-qI-hp1"/>
                     <connections>
                         <segue destination="YOe-8p-SIQ" kind="show" identifier="bookparking" id="1WW-uk-oYv"/>
+                        <segue destination="l8l-6v-JDJ" kind="show" identifier="parklotguide" id="IMl-Ra-v5x"/>
+                        <segue destination="ifw-Bn-pYA" kind="show" identifier="findcar" id="6Ju-gw-RHz"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1qK-D7-ibb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="943" y="72"/>
+        </scene>
+        <!--Reserved Car Lot View Controller-->
+        <scene sceneID="SXs-iH-Jw2">
+            <objects>
+                <tableViewController id="l8l-6v-JDJ" customClass="ReservedCarLotViewController" customModule="Light_G" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="D1F-lE-9OD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="booklotcell" rowHeight="81" id="ltt-9Y-vpZ" customClass="ReservedCarLotTableViewCell" customModule="Light_G" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="81"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ltt-9Y-vpZ" id="LDj-tg-u5e">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="81"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SIj-vY-80R">
+                                            <rect key="frame" x="50" y="21" width="314" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dG8-1a-HEl">
+                                            <rect key="frame" x="50" y="59" width="314" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="SIj-vY-80R" firstAttribute="top" secondItem="LDj-tg-u5e" secondAttribute="topMargin" id="5Be-60-1Ij"/>
+                                        <constraint firstItem="dG8-1a-HEl" firstAttribute="leading" secondItem="LDj-tg-u5e" secondAttribute="leadingMargin" constant="30" id="HM5-mm-jmn"/>
+                                        <constraint firstItem="dG8-1a-HEl" firstAttribute="top" secondItem="SIj-vY-80R" secondAttribute="bottom" constant="10" id="Hvd-eA-2uk"/>
+                                        <constraint firstItem="dG8-1a-HEl" firstAttribute="bottom" secondItem="LDj-tg-u5e" secondAttribute="bottomMargin" id="Nsi-MQ-dBU"/>
+                                        <constraint firstItem="SIj-vY-80R" firstAttribute="leading" secondItem="LDj-tg-u5e" secondAttribute="leadingMargin" constant="30" id="cDv-YY-l6v"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="dG8-1a-HEl" secondAttribute="trailing" constant="30" id="ehE-wn-fcK"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="SIj-vY-80R" secondAttribute="trailing" constant="30" id="ekk-09-TUe"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="DataLabel" destination="dG8-1a-HEl" id="mJo-5U-aVm"/>
+                                    <outlet property="NameLabel" destination="SIj-vY-80R" id="r9e-fC-dfL"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="l8l-6v-JDJ" id="2W4-d3-Lzb"/>
+                            <outlet property="delegate" destination="l8l-6v-JDJ" id="IkS-ap-Owx"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Win-ni-5Ey"/>
+                    <connections>
+                        <segue destination="vpf-Rj-6vy" kind="show" identifier="findlotmap" id="VEu-ei-lQB"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T7S-hf-mdO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1840.5797101449277" y="764.73214285714278"/>
+        </scene>
+        <!--Find Park Lot View Controller-->
+        <scene sceneID="bY7-36-wcu">
+            <objects>
+                <viewController id="vpf-Rj-6vy" customClass="FindParkLotViewController" customModule="Light_G" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IaW-4f-QCC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="siK-ZP-6jY">
+                                <rect key="frame" x="0.0" y="44" width="414" height="798"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cRm-Sn-yxH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="siK-ZP-6jY" firstAttribute="leading" secondItem="cRm-Sn-yxH" secondAttribute="leading" id="Bfv-4a-cqe"/>
+                            <constraint firstItem="siK-ZP-6jY" firstAttribute="top" secondItem="cRm-Sn-yxH" secondAttribute="top" id="Byk-2b-icO"/>
+                            <constraint firstItem="cRm-Sn-yxH" firstAttribute="trailing" secondItem="siK-ZP-6jY" secondAttribute="trailing" id="LcJ-EQ-Cb1"/>
+                            <constraint firstItem="cRm-Sn-yxH" firstAttribute="bottom" secondItem="siK-ZP-6jY" secondAttribute="bottom" id="eHM-9w-Zs7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="sfM-n6-NH6"/>
+                    <connections>
+                        <outlet property="mapView" destination="siK-ZP-6jY" id="7Mo-rz-J1k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3iV-iA-2qA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2762" y="772"/>
+        </scene>
+        <!--Parked Car List View Controller-->
+        <scene sceneID="1FK-oB-c0Y">
+            <objects>
+                <tableViewController id="ifw-Bn-pYA" customClass="ParkedCarListViewController" customModule="Light_G" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="8c3-QR-c3a">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="parkcarcell" rowHeight="81" id="0S5-eV-e65" customClass="ParkedCarTableViewCell" customModule="Light_G" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="81"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0S5-eV-e65" id="1Lx-Vy-hUl">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="81"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ywJ-ye-Jnd">
+                                            <rect key="frame" x="50" y="11" width="314" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHj-uV-TCE">
+                                            <rect key="frame" x="50" y="49" width="314" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ywJ-ye-Jnd" firstAttribute="top" secondItem="1Lx-Vy-hUl" secondAttribute="topMargin" id="As7-om-bef"/>
+                                        <constraint firstItem="LHj-uV-TCE" firstAttribute="leading" secondItem="1Lx-Vy-hUl" secondAttribute="leadingMargin" constant="30" id="OOE-qP-Ix5"/>
+                                        <constraint firstItem="LHj-uV-TCE" firstAttribute="top" secondItem="ywJ-ye-Jnd" secondAttribute="bottom" constant="20" id="PTc-Zc-Gvh"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="ywJ-ye-Jnd" secondAttribute="trailing" constant="30" id="VMx-QN-eAf"/>
+                                        <constraint firstItem="ywJ-ye-Jnd" firstAttribute="leading" secondItem="1Lx-Vy-hUl" secondAttribute="leadingMargin" constant="30" id="Zbp-D4-0hf"/>
+                                        <constraint firstItem="LHj-uV-TCE" firstAttribute="bottom" secondItem="1Lx-Vy-hUl" secondAttribute="bottomMargin" id="k4x-C6-IG7"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="LHj-uV-TCE" secondAttribute="trailing" constant="30" id="z5l-f7-vRf"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="DataLabel" destination="LHj-uV-TCE" id="svY-xt-IYX"/>
+                                    <outlet property="NameLabel" destination="ywJ-ye-Jnd" id="gkp-A5-DS8"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ifw-Bn-pYA" id="t9K-Q7-5Hr"/>
+                            <outlet property="delegate" destination="ifw-Bn-pYA" id="nnN-5z-6iW"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="R9V-bb-HIo"/>
+                    <connections>
+                        <segue destination="QOo-Qn-p8l" kind="show" identifier="findcarmap" id="EoC-ns-8l2"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xmx-NM-kdf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1840.5797101449277" y="1472.5446428571429"/>
+        </scene>
+        <!--Find Car View Controller-->
+        <scene sceneID="GCO-rx-G22">
+            <objects>
+                <viewController id="QOo-Qn-p8l" customClass="FindCarViewController" customModule="Light_G" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i6P-LJ-3vX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uH6-LA-XCe">
+                                <rect key="frame" x="0.0" y="44" width="414" height="798"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xAy-Xe-yLr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xAy-Xe-yLr" firstAttribute="bottom" secondItem="uH6-LA-XCe" secondAttribute="bottom" id="8ck-ci-bh9"/>
+                            <constraint firstItem="uH6-LA-XCe" firstAttribute="top" secondItem="xAy-Xe-yLr" secondAttribute="top" id="Osm-hZ-VlZ"/>
+                            <constraint firstItem="uH6-LA-XCe" firstAttribute="leading" secondItem="xAy-Xe-yLr" secondAttribute="leading" id="f4M-Hq-XwQ"/>
+                            <constraint firstItem="xAy-Xe-yLr" firstAttribute="trailing" secondItem="uH6-LA-XCe" secondAttribute="trailing" id="job-Dg-RRl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="V4v-IB-8La"/>
+                    <connections>
+                        <outlet property="mapView" destination="uH6-LA-XCe" id="NdZ-B5-gUA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Sg-J8-47A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2770" y="1490"/>
         </scene>
         <!--Booking View Controller-->
         <scene sceneID="r2c-mY-Bmf">
