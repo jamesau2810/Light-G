@@ -9,7 +9,8 @@ import Foundation
 import UIKit
 class ReservedCarLotViewController: UITableViewController {
     let CellID = "booklotcell"
-    var bookLotList:[[String:Any]] = [["Name":"ifc carpark","address":"1st Finance str","DayTime":"202302061630"],["Name":"BOC tower carpark","address":"23rd Cotton Tree Drive ","DayTime":"202302110830"]]
+    var bookLotList:[[String:Any]] = [["Name":"ifc carpark","address":"1st Finance str","DayTime":"202302061630","x":114.159422717148,"y":22.2852422938045],["Name":"BOC tower carpark","address":"23rd Cotton Tree Drive ","DayTime":"202302110830","x":114.1617166078604,"y":22.279246948238978]]
+    var select = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
@@ -34,10 +35,14 @@ class ReservedCarLotViewController: UITableViewController {
         return UITableView.automaticDimension
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.select = indexPath.row
         self.performSegue(withIdentifier: "findlotmap", sender: self)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let controller = segue.destination as? FindParkLotViewController else { return  }
+        controller.coordinate["x"] = bookLotList[self.select]["x"] as! Double
+        controller.coordinate["y"] = bookLotList[self.select]["y"] as! Double
+        
     }
 }

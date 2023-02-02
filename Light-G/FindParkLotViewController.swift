@@ -10,15 +10,18 @@ import UIKit
 import MapKit
 
 class FindParkLotViewController: UIViewController {
+    var coordinate: [String: Double] = ["x":114.18401810520214,"y":22.279806493039132]
     @IBOutlet private var mapView: MKMapView!
     override func viewDidLoad() {
         // 114.18401810520214,
         // 22.279806493039132
-        let initialLocation = CLLocation(latitude: 22.279806493039132, longitude:114.18401810520214)
+        let initialLocation = CLLocation(latitude: coordinate["y"] ?? 0.0, longitude:coordinate["x"] ?? 0.0)
         mapView.centerToLocation(initialLocation)
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+
 }
 private extension MKMapView {
   func centerToLocation(
