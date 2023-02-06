@@ -27,6 +27,8 @@
 		1FBA911629877FFB002694B3 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBA911529877FFB002694B3 /* MenuTableViewCell.swift */; };
 		1FBA911829878223002694B3 /* BookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBA911729878223002694B3 /* BookingViewController.swift */; };
 		1FBA911A2987826A002694B3 /* BookingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBA91192987826A002694B3 /* BookingTableViewCell.swift */; };
+		1FBC010D29914ACF00676AED /* FindLotIndoorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBC010C29914ACF00676AED /* FindLotIndoorViewController.swift */; };
+		1FBC010F29914AE900676AED /* FindCarIndoorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBC010E29914AE900676AED /* FindCarIndoorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		1FBA911529877FFB002694B3 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		1FBA911729878223002694B3 /* BookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewController.swift; sourceTree = "<group>"; };
 		1FBA91192987826A002694B3 /* BookingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingTableViewCell.swift; sourceTree = "<group>"; };
+		1FBC010C29914ACF00676AED /* FindLotIndoorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindLotIndoorViewController.swift; sourceTree = "<group>"; };
+		1FBC010E29914AE900676AED /* FindCarIndoorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindCarIndoorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 				1FB421B5298B94ED0055B509 /* ReservedCarLotViewController.swift */,
 				1FB421BC298B9CF20055B509 /* FindParkLotViewController.swift */,
 				1FB421BE298B9D830055B509 /* FindCarViewController.swift */,
+				1FBC010C29914ACF00676AED /* FindLotIndoorViewController.swift */,
+				1FBC010E29914AE900676AED /* FindCarIndoorViewController.swift */,
 			);
 			path = "Light-G";
 			sourceTree = "<group>";
@@ -204,8 +210,10 @@
 				1FBA911A2987826A002694B3 /* BookingTableViewCell.swift in Sources */,
 				1FBA911329877BDC002694B3 /* MenuViewController.swift in Sources */,
 				1FBA911629877FFB002694B3 /* MenuTableViewCell.swift in Sources */,
+				1FBC010F29914AE900676AED /* FindCarIndoorViewController.swift in Sources */,
 				1FB421BA298B97430055B509 /* ParkedCarTableViewCell.swift in Sources */,
 				1FBA90FC29877990002694B3 /* AppDelegate.swift in Sources */,
+				1FBC010D29914ACF00676AED /* FindLotIndoorViewController.swift in Sources */,
 				1FB421BD298B9CF20055B509 /* FindParkLotViewController.swift in Sources */,
 				1FBA910629877990002694B3 /* Light_G.xcdatamodeld in Sources */,
 				1FBA911829878223002694B3 /* BookingViewController.swift in Sources */,

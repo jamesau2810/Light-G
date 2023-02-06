@@ -36,13 +36,24 @@ class ReservedCarLotViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.select = indexPath.row
-        self.performSegue(withIdentifier: "findlotmap", sender: self)
+//        guard let externurl = URL(string: lnk) else { return }
+        // Open safari Method
+//            UIApplication.shared.open(externurl, options: [:], completionHandler: nil)
+        self.performSegue(withIdentifier: "findlotindoor", sender: self)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let controller = segue.destination as? FindParkLotViewController else { return  }
-        controller.coordinate["x"] = bookLotList[self.select]["x"] as! Double
-        controller.coordinate["y"] = bookLotList[self.select]["y"] as! Double
+        switch segue.identifier {
+        case "findlotmap":
+            guard let controller = segue.destination as? FindParkLotViewController else { return  }
+            controller.coordinate["x"] = bookLotList[self.select]["x"] as! Double
+            controller.coordinate["y"] = bookLotList[self.select]["y"] as! Double
+        case "findlotindoor":
+            break
+        default:
+            break
+        }
+        
         
     }
 }

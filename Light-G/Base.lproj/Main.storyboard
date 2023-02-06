@@ -166,6 +166,7 @@
                     <navigationItem key="navigationItem" id="Win-ni-5Ey"/>
                     <connections>
                         <segue destination="vpf-Rj-6vy" kind="show" identifier="findlotmap" id="VEu-ei-lQB"/>
+                        <segue destination="XMA-A3-ll9" kind="show" identifier="findlotindoor" id="JUx-ab-guR"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T7S-hf-mdO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -201,6 +202,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3iV-iA-2qA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2760.8695652173915" y="771.42857142857144"/>
+        </scene>
+        <!--Find Lot Indoor View Controller-->
+        <scene sceneID="UuE-LT-26W">
+            <objects>
+                <viewController id="XMA-A3-ll9" customClass="FindLotIndoorViewController" customModule="Light_G" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F7O-sF-H9t">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="x4S-KV-5CH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="exd-VR-0kT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OwR-AY-hbF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3636" y="795"/>
         </scene>
         <!--Parked Car List View Controller-->
         <scene sceneID="1FK-oB-c0Y">
@@ -255,6 +272,7 @@
                     <navigationItem key="navigationItem" id="R9V-bb-HIo"/>
                     <connections>
                         <segue destination="QOo-Qn-p8l" kind="show" identifier="findcarmap" id="EoC-ns-8l2"/>
+                        <segue destination="pOx-KP-uNM" kind="show" identifier="findcarindoor" id="UFC-me-jhF"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xmx-NM-kdf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -290,6 +308,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Sg-J8-47A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2769.5652173913045" y="1489.9553571428571"/>
+        </scene>
+        <!--Find Car Indoor View Controller-->
+        <scene sceneID="Z47-hd-rIb">
+            <objects>
+                <viewController id="pOx-KP-uNM" customClass="FindCarIndoorViewController" customModule="Light_G" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nxs-Vm-foz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="55h-Io-zJC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Yg8-tk-EPf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nuN-c4-MiW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3620" y="1509"/>
         </scene>
         <!--Booking View Controller-->
         <scene sceneID="r2c-mY-Bmf">

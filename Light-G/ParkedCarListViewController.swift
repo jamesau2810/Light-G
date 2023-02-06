@@ -35,13 +35,21 @@ class ParkedCarListViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.select = indexPath.row
-        self.performSegue(withIdentifier: "findcarmap", sender: self)
+        self.performSegue(withIdentifier: "findcarindoor", sender: self)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let controller = segue.destination as? FindCarViewController else { return  }
-        controller.coordinate["x"] = ParkCarList[self.select]["x"] as? Double
-        controller.coordinate["y"] = ParkCarList[self.select]["y"] as? Double
+        switch segue.identifier {
+        case "findcarmap":
+            guard let controller = segue.destination as? FindCarViewController else { return  }
+            controller.coordinate["x"] = ParkCarList[self.select]["x"] as? Double
+            controller.coordinate["y"] = ParkCarList[self.select]["y"] as? Double
+        case "findcarindoor":
+            break
+        default:
+            break
+        }
+        
 
     }
 }
